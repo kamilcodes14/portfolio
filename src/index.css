@@ -1,0 +1,191 @@
+:root {
+  /* ---- Color tokens ---- */
+  --bg: #0A0E17;
+  --bg-panel: #10151F;
+  --bg-panel-raised: #151C29;
+  --border: rgba(232, 237, 244, 0.09);
+  --border-strong: rgba(232, 237, 244, 0.18);
+
+  --cyan: #2DE2C8;
+  --cyan-dim: rgba(45, 226, 200, 0.14);
+  --amber: #FFB020;
+  --violet: #A855F7;
+
+  --text: #E8EDF4;
+  --text-muted: #8792A6;
+  --text-faint: #566076;
+
+  /* ---- Type tokens ---- */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(45, 226, 200, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(168, 85, 247, 0.06), transparent);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--text);
+}
+
+p { margin: 0; line-height: 1.65; color: var(--text-muted); }
+
+a { color: inherit; text-decoration: none; }
+
+button { font-family: inherit; cursor: pointer; }
+
+::selection { background: var(--cyan); color: #05121A; }
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Shared utility classes ---- */
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
+}
+
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 6rem;
+}
+
+/* Bracket-corner panel — the site's signature framing motif */
+.bracket-panel {
+  position: relative;
+  padding: 1.75rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.bracket-panel::before,
+.bracket-panel::after,
+.bracket-panel > .bracket-tr,
+.bracket-panel > .bracket-bl {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--cyan);
+  opacity: 0.55;
+  transition: opacity 0.25s ease, border-color 0.25s ease;
+}
+.bracket-panel::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.bracket-panel::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+.bracket-panel:hover::before,
+.bracket-panel:hover::after {
+  opacity: 1;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 0.85em 1.4em;
+  border-radius: 3px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+}
+.btn:hover { border-color: var(--cyan); background: var(--cyan-dim); transform: translateY(-1px); }
+
+.btn-primary {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: #05141A;
+  font-weight: 600;
+}
+.btn-primary:hover { background: #4EEBD4; border-color: #4EEBD4; }
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  padding: 0.3em 0.65em;
+  border-radius: 3px;
+  border: 1px solid var(--border-strong);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+.section-heading .index {
+  font-family: var(--font-mono);
+  color: var(--cyan);
+  font-size: 0.85rem;
+}

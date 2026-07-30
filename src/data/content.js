@@ -1,0 +1,167 @@
+export const profile = {
+  name: "Syed Kamil Taqi Zaidi",
+  callsign: "K. ZAIDI",
+  roles: ["AI/ML Engineer", "Full-Stack Developer", "Space Enthusiast"],
+  location: "Lahore, Pakistan",
+  email: "zaidikamil9@gmail.com",
+  linkedin: "https://linkedin.com/in/syedkamilzaidi",
+  github: "https://github.com/kamilcodes14",
+  summary:
+    "Second-year Computer Science student at UMT Lahore with hands-on experience in full-stack development, machine learning, and Generative AI. Currently an AI/ML Engineer at Product Management Accelerator and a Machine Learning Intern at CodeAlpha. I build things end-to-end — from trained models to the interfaces around them.",
+  achievement: "3rd Nationally — National Science Olympiad, Computer Science",
+};
+
+export const stats = [
+  { value: "5", label: "Live Projects" },
+  { value: "3", label: "Internships" },
+  { value: "98%", label: "Best Model Accuracy" },
+  { value: "3rd", label: "National Science Olympiad" },
+];
+
+export const education = {
+  school: "University of Management and Technology (UMT)",
+  location: "Lahore, Pakistan",
+  degree: "B.S. Computer Science",
+  gpa: "3.1 / 4.0",
+  expected: "Expected October 2028",
+  coursework: [
+    "Database Systems",
+    "Computer Networks",
+    "Computer Architecture",
+    "Theory of Automata",
+    "Professional Practices",
+  ],
+};
+
+export const about = {
+  bio: [
+    "I'm a second-year CS student at UMT Lahore, splitting my time between two things I care about: building AI/ML systems that work in the real world, and full-stack products people actually use.",
+    "Right now that means an AI/ML Engineer role at Product Management Accelerator (a US-based company), a parallel Machine Learning internship at CodeAlpha, and a growing list of side projects — a voice assistant modeled on Iron Man's F.R.I.D.A.Y, a full-stack weather app, and a couple of ML models I've pushed from notebook to deployed demo.",
+    "Outside of code, I'm a genuine space and astronomy enthusiast — I follow JWST, the Artemis program, and exoplanet research closely. That interest isn't just a hobby footnote: it's what led me to build Cosmos Explorer, a WebGL 3D space simulator, and it's the reason I'm currently applying ML to NASA's Kepler dataset to detect exoplanet transits.",
+  ],
+  facts: [
+    { label: "Based in", value: "Lahore, Pakistan" },
+    { label: "Studying", value: "B.S. Computer Science, UMT" },
+    { label: "Focus", value: "AI/ML + Full-Stack" },
+    { label: "Also into", value: "Astronomy, space missions" },
+  ],
+};
+
+export const experience = [
+  {
+    org: "Product Management Accelerator (PMA)",
+    role: "AI/ML Engineer",
+    location: "Remote, USA",
+    period: "Present",
+    current: true,
+    bullets: [
+      "Working as an AI/ML Engineer at a US-based company, contributing to AI/ML engineering initiatives.",
+    ],
+  },
+  {
+    org: "CodeAlpha",
+    role: "Machine Learning Intern",
+    location: "Remote, India",
+    period: "2026 – Present",
+    current: true,
+    bullets: [
+      "Building end-to-end ML pipelines — data cleaning, feature engineering, model training, and evaluation — shipped as interactive, deployable demos rather than notebooks.",
+      "Trained and benchmarked Logistic Regression, Random Forest, and Gradient Boosting for loan-risk scoring (78% accuracy) on the UCI German Credit dataset, and 4 classifiers across 3 disease-prediction datasets (up to 98% accuracy), each with 5-fold cross-validation.",
+    ],
+  },
+  {
+    org: "Systems Limited",
+    role: "AI Intern",
+    location: "Lahore, Pakistan",
+    period: "2025",
+    current: false,
+    bullets: [
+      "Built and integrated LLM-powered automation solutions into enterprise workflows using Generative AI APIs, handling prompt engineering, response parsing, and pipeline integration.",
+      "Developed Python automation scripts to eliminate repetitive manual workflows, and collaborated with senior developers in a professional SDLC environment applying best practices for code quality and delivery.",
+    ],
+  },
+];
+
+export const projects = [
+  {
+    name: "F.R.I.D.A.Y. — AI Voice Assistant",
+    tag: "Personal Project",
+    tech: ["Python", "Tkinter", "Web Speech API", "Claude API"],
+    blurb:
+      "A personal AI voice assistant inspired by Iron Man's AI assistant — a Python/Tkinter desktop HUD and a browser version with an animated canvas HUD, powered by the Claude API. Low-latency wake-word interaction (instant double-clap on desktop, one-click in-browser), plus a mock interview coach refined through repeated self-testing.",
+    live: "https://friday-jpx4fu2im-kamilcodes14s-projects.vercel.app/",
+    github: "https://github.com/kamilcodes14/friday",
+  },
+  {
+    name: "WeatherApp — PM Accelerator Assessment",
+    tag: "Technical Assessment",
+    tech: ["React", "FastAPI", "Supabase"],
+    blurb:
+      "A full-stack weather app with real-time conditions and 5-day forecasts via the OpenWeatherMap API. GPS-based location detection, full CRUD on saved queries backed by Supabase (Postgres), and data export in JSON, CSV, XML, and Markdown.",
+    live: "https://weather-app-pm-accelerator-4a9a.vercel.app/",
+    github: "https://github.com/kamilcodes14/weather-app-pm-accelerator",
+  },
+  {
+    name: "Disease Prediction from Medical Data",
+    tag: "CodeAlpha ML Internship",
+    tech: ["Python", "Scikit-learn", "XGBoost"],
+    blurb:
+      "ML system predicting Diabetes, Heart Disease, and Breast Cancer risk across 4 classifiers per condition. Best model per dataset reaches 98% test accuracy on Breast Cancer, 82% on Heart Disease, and 75% on Diabetes. Includes an OCR image-upload feature for lab reports.",
+    live: "https://disease-prediction-kamil.streamlit.app/",
+    github: "https://github.com/kamilcodes14/CodeAlpha_DiseasePrediction",
+  },
+  {
+    name: "Smart Parking Allocation & Zone Management",
+    tag: "Systems Project",
+    tech: ["C++"],
+    blurb:
+      "Console-based allocation system managing parking slots across zones, with cross-zone fallback when a preferred zone is full. Request state machine (Pending → Allocated → Cancelled) with a rollback manager, modeled with an object-oriented architecture.",
+    live: "https://smart-parking-system-indol-rho.vercel.app/",
+    github: "https://github.com/kamilcodes14/smart-parking-system",
+  },
+  {
+    name: "Credit Scoring Model",
+    tag: "CodeAlpha ML Internship",
+    tech: ["Python", "Scikit-learn", "Pandas"],
+    blurb:
+      "Credit scoring model on the UCI German Credit dataset (1,000 applicants). Benchmarked Logistic Regression, Random Forest, and Gradient Boosting — improved accuracy from 65.5% baseline to 78%, F1-score to 0.85. Ships with an interactive browser-based demo.",
+    live: null,
+    github: "https://github.com/kamilcodes14/CodeAlpha_CreditScoringModel",
+  },
+];
+
+export const skills = [
+  {
+    category: "Languages",
+    items: ["Python", "C++", "JavaScript", "SQL", "x86 Assembly"],
+  },
+  {
+    category: "AI / LLM",
+    items: [
+      "LLM API Integration (OpenAI, Gemini, Anthropic)",
+      "Prompt Engineering",
+      "Generative AI Pipelines",
+    ],
+  },
+  {
+    category: "Frameworks",
+    items: ["React.js", "Node.js", "Express.js", "REST APIs"],
+  },
+  {
+    category: "ML / DL",
+    items: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "XGBoost"],
+  },
+  {
+    category: "Tools & Databases",
+    items: ["Git", "MySQL", "SQL Server", "Figma", "VS Code"],
+  },
+];
+
+export const nav = [
+  { path: "/", label: "Home", code: "SYS.00" },
+  { path: "/about", label: "About", code: "SYS.01" },
+  { path: "/experience", label: "Experience", code: "SYS.02" },
+  { path: "/projects", label: "Projects", code: "SYS.03" },
+  { path: "/skills", label: "Skills", code: "SYS.04" },
+  { path: "/contact", label: "Contact", code: "SYS.05" },
+];
