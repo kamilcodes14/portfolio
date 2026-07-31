@@ -47,11 +47,11 @@ export default function Contact() {
 
         <div className="contact__grid">
           <a href={profile.linkedin} target="_blank" rel="noreferrer" className="contact__card bracket-panel">
-            <span className="mono contact__card-label">SYS/LINKEDIN</span>
+            <span className="mono contact__card-label">LINKEDIN</span>
             <span className="contact__card-value">Connect on LinkedIn</span>
           </a>
           <a href={profile.github} target="_blank" rel="noreferrer" className="contact__card bracket-panel">
-            <span className="mono contact__card-label">SYS/GITHUB</span>
+            <span className="mono contact__card-label">GITHUB</span>
             <span className="contact__card-value">See my repos</span>
           </a>
         </div>
