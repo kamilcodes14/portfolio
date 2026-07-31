@@ -107,7 +107,7 @@ export const projects = [
     tech: ["Python", "Scikit-learn", "XGBoost"],
     blurb:
       "ML system predicting Diabetes, Heart Disease, and Breast Cancer risk across 4 classifiers per condition. Best model per dataset reaches 98% test accuracy on Breast Cancer, 82% on Heart Disease, and 75% on Diabetes. Includes an OCR image-upload feature for lab reports.",
-    live: "https://disease-prediction-kamil.streamlit.app/",
+    live: "https://disease-prediction-app-7w65-okm9gpedq-kamilcodes14s-projects.vercel.app/",
     github: "https://github.com/kamilcodes14/CodeAlpha_DiseasePrediction",
   },
   {

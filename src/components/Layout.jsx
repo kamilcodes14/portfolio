@@ -1,6 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useState } from "react";
-import HudBar from "./HudBar";
 import { nav, profile } from "../data/content";
 import "./Layout.css";
 
@@ -9,7 +8,6 @@ export default function Layout() {
 
   return (
     <>
-      <HudBar />
       <header className="site-header">
         <div className="site-header__inner">
           <NavLink to="/" className="brand mono" onClick={() => setOpen(false)}>
