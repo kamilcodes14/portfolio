@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { about, education, profile } from "../data/content";
+import kamilPhoto from "../assets/kamil-photo.jpg";
 import "./About.css";
 
 export default function About() {
@@ -33,6 +34,16 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
         >
+          <div className="bracket-panel about__photo-panel">
+            <div className="about__photo-frame">
+              <img src={kamilPhoto} alt={profile.name} className="about__photo" />
+            </div>
+            <div className="about__photo-caption">
+              <span className="mono about__photo-name">{profile.callsign}</span>
+              <span className="mono about__photo-status"><span className="dot" /> ONLINE</span>
+            </div>
+          </div>
+
           <div className="bracket-panel about__facts">
             <span className="eyebrow">Quick Facts</span>
             <dl className="facts-list">
