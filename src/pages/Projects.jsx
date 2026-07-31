@@ -6,7 +6,6 @@ export default function Projects() {
   return (
     <div className="page projects">
       <div className="section-heading">
-        <span className="index mono">SYS.03</span>
         <h2>Projects</h2>
       </div>
       <p className="projects__intro">Things I've built, end to end — from model to interface to deployment.</p>

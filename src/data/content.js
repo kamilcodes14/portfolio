@@ -7,7 +7,7 @@ export const profile = {
   linkedin: "https://linkedin.com/in/syedkamilzaidi",
   github: "https://github.com/kamilcodes14",
   summary:
-    "Second-year Computer Science student at UMT Lahore with hands-on experience in full-stack development, machine learning, and Generative AI. Currently an AI/ML Engineer at Product Management Accelerator and a Machine Learning Intern at CodeAlpha. I build things end-to-end — from trained models to the interfaces around them.",
+    "I'm a Full-Stack and AI/ML Engineer with a hands-on grip on the full pipeline — training and evaluating machine learning models, integrating LLMs and building Generative AI pipelines, then wrapping it all in the React and FastAPI interfaces people actually use. I care about writing clean, dependable code, and I like using what I know to genuinely help people: whether that's a small business that needs a website or a real problem someone's trying to solve with data. If you need a hand with something like that, feel free to reach out.",
   achievement: "3rd Nationally — National Science Olympiad, Computer Science",
 };
 
@@ -158,10 +158,10 @@ export const skills = [
 ];
 
 export const nav = [
-  { path: "/", label: "Home", code: "SYS.00" },
-  { path: "/about", label: "About", code: "SYS.01" },
-  { path: "/experience", label: "Experience", code: "SYS.02" },
-  { path: "/projects", label: "Projects", code: "SYS.03" },
-  { path: "/skills", label: "Skills", code: "SYS.04" },
-  { path: "/contact", label: "Contact", code: "SYS.05" },
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
+  { path: "/experience", label: "Experience" },
+  { path: "/projects", label: "Projects" },
+  { path: "/skills", label: "Skills" },
+  { path: "/contact", label: "Contact" },
 ];

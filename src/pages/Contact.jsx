@@ -19,7 +19,6 @@ export default function Contact() {
   return (
     <div className="page contact">
       <div className="section-heading">
-        <span className="index mono">SYS.05</span>
         <h2>Contact</h2>
       </div>
 

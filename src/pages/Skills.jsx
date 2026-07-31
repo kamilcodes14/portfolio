@@ -6,7 +6,6 @@ export default function Skills() {
   return (
     <div className="page skills">
       <div className="section-heading">
-        <span className="index mono">SYS.04</span>
         <h2>Skills</h2>
       </div>
       <p className="skills__intro">Systems I work with, grouped by subsystem.</p>

@@ -7,7 +7,6 @@ export default function About() {
   return (
     <div className="page about">
       <div className="section-heading">
-        <span className="index mono">SYS.01</span>
         <h2>About</h2>
       </div>
 

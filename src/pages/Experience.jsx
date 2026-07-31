@@ -6,7 +6,6 @@ export default function Experience() {
   return (
     <div className="page experience">
       <div className="section-heading">
-        <span className="index mono">SYS.02</span>
         <h2>Experience</h2>
       </div>
       <p className="experience__intro">A running log of where I've worked and what I've shipped.</p>

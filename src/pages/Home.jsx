@@ -81,7 +81,6 @@ export default function Home() {
 
       <section className="featured">
         <div className="section-heading">
-          <span className="index mono">SYS.03</span>
           <h2>Featured Missions</h2>
           <Link to="/projects" className="btn" style={{ marginLeft: "auto" }}>All Projects</Link>
         </div>

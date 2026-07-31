@@ -29,7 +29,6 @@ export default function Layout() {
                 }
                 onClick={() => setOpen(false)}
               >
-                <span className="site-nav__code">{item.code}</span>
                 {item.label}
               </NavLink>
             ))}
