@@ -21,24 +21,27 @@
 
 .contact__actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
 
-.contact__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  max-width: 560px;
-}
-
-.contact__card {
+.contact__socials {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  gap: 0.9rem;
 }
-.contact__card:hover { transform: translateY(-2px); border-color: var(--border-strong); }
 
-.contact__card-label { font-size: 0.68rem; color: var(--cyan); }
-.contact__card-value { font-size: 0.95rem; color: var(--text); }
+.contact__icon-btn {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-panel);
+  color: var(--text-muted);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, background 0.2s ease;
+}
 
-@media (max-width: 560px) {
-  .contact__grid { grid-template-columns: 1fr; }
+.contact__icon-btn:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+  transform: translateY(-2px);
 }
