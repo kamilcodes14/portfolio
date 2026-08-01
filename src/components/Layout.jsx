@@ -1,15 +1,40 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { nav, profile } from "../data/content";
-import CursorGlow from "./CursorGlow";
 import "./Layout.css";
 
 export default function Layout() {
   const [open, setOpen] = useState(false);
+  const glowRef = useRef(null);
+
+  useEffect(() => {
+    const glow = glowRef.current;
+    if (!glow) return;
+
+    let x = window.innerWidth / 2;
+    let y = window.innerHeight / 2;
+    let frame = null;
+
+    const handleMove = (e) => {
+      x = e.clientX;
+      y = e.clientY;
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        glow.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+        frame = null;
+      });
+    };
+
+    window.addEventListener("mousemove", handleMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMove);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, []);
 
   return (
     <>
-      <CursorGlow />
+      <div className="cursor-glow" ref={glowRef} aria-hidden="true" />
 
       <header className="site-header">
         <div className="site-header__inner">

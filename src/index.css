@@ -6,10 +6,10 @@
   --border: rgba(232, 237, 244, 0.09);
   --border-strong: rgba(232, 237, 244, 0.18);
 
-  --cyan: #00F0FF;
-  --cyan-dim: rgba(0, 240, 255, 0.14);
+  --cyan: #FF6B35;
+  --cyan-dim: rgba(255, 107, 53, 0.14);
   --amber: #FFB020;
-  --violet: #7928CA;
+  --violet: #D63AFF;
 
   --text: #E8EDF4;
   --text-muted: #8792A6;
@@ -37,8 +37,8 @@ html, body {
 
 body {
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 240, 255, 0.10), transparent),
-    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(121, 40, 202, 0.10), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 107, 53, 0.10), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(214, 58, 255, 0.10), transparent);
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -165,7 +165,7 @@ button:focus-visible,
   color: var(--bg);
   font-weight: 600;
 }
-.btn-primary:hover { background: #66F5FF; border-color: #66F5FF; }
+.btn-primary:hover { background: #FF8F5E; border-color: #FF8F5E; }
 
 .tag {
   font-family: var(--font-mono);

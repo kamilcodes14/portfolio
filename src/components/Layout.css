@@ -1,3 +1,23 @@
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.28) 40%, transparent 72%);
+  filter: blur(18px);
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+
+main, .site-footer { position: relative; z-index: 2; }
+
+@media (max-width: 820px), (hover: none) {
+  .cursor-glow { display: none; }
+}
+
 .site-header {
   position: sticky;
   top: 0;
