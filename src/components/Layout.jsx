@@ -10,12 +10,6 @@ export default function Layout() {
     <>
       <header className="site-header">
         <div className="site-header__inner">
-          <NavLink to="/" className="brand mono" onClick={() => setOpen(false)}>
-            <span className="brand__bracket">[</span>
-            KZ
-            <span className="brand__bracket">]</span>
-          </NavLink>
-
           <nav className={`site-nav ${open ? "site-nav--open" : ""}`}>
             {nav.map((item) => (
               <NavLink

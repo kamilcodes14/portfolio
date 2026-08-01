@@ -16,18 +16,9 @@
   gap: 2rem;
 }
 
-.brand {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: 0.04em;
-}
-.brand__bracket { color: var(--cyan); }
-
 .site-nav {
   display: flex;
   gap: 0.25rem;
-  margin-left: auto;
 }
 
 .site-nav__link {
