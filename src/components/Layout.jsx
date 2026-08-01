@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useState } from "react";
 import { nav, profile } from "../data/content";
+import CursorGlow from "./CursorGlow";
 import "./Layout.css";
 
 export default function Layout() {
@@ -8,6 +9,8 @@ export default function Layout() {
 
   return (
     <>
+      <CursorGlow />
+
       <header className="site-header">
         <div className="site-header__inner">
           <nav className={`site-nav ${open ? "site-nav--open" : ""}`}>
