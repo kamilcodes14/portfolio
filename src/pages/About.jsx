@@ -17,7 +17,14 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
+          <p className="about__hook">{about.hook}</p>
+
           {about.bio.map((para, i) => (
+            <p key={i} className="about__para">{para}</p>
+          ))}
+
+          <h3 className="about__side-heading">{about.sideHeading}</h3>
+          {about.sideBio.map((para, i) => (
             <p key={i} className="about__para">{para}</p>
           ))}
 

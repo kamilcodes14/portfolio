@@ -5,9 +5,26 @@
   align-items: start;
 }
 
+.about__hook {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 1.3rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--cyan);
+}
+
 .about__para {
   font-size: 1rem;
   margin-bottom: 1.1rem;
+}
+
+.about__side-heading {
+  font-size: 1rem;
+  color: var(--cyan);
+  margin: 1.6rem 0 0.9rem;
 }
 
 .about__achievement {
