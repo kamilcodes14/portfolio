@@ -68,7 +68,7 @@ export const experience = [
     org: "Systems Limited",
     role: "AI Intern",
     location: "Lahore, Pakistan",
-    period: "Aug 2025 -Dec 2025n",
+    period: "Aug 2025 -Dec 2025",
     current: false,
     bullets: [
       "Built and integrated LLM-powered automation solutions into enterprise workflows using Generative AI APIs, handling prompt engineering, response parsing, and pipeline integration.",
@@ -153,7 +153,7 @@ export const skills = [
   },
   {
     category: "ML / DL",
-    items: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "XGBoost"],
+    items: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "XGBoost" , "TensorFlow", "Keras", "PyTorch"],
   },
   {
     category: "Tools & Databases",
