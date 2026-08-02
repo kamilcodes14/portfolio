@@ -17,7 +17,14 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
+          <p className="about__hook">{about.hook}</p>
+
           {about.bio.map((para, i) => (
+            <p key={i} className="about__para">{para}</p>
+          ))}
+
+          <h3 className="about__side-heading">{about.sideHeading}</h3>
+          {about.sideBio.map((para, i) => (
             <p key={i} className="about__para">{para}</p>
           ))}
 
@@ -58,13 +65,8 @@ export default function About() {
           <div className="bracket-panel about__education">
             <span className="eyebrow">Education</span>
             <h3 className="about__school">{education.school}</h3>
-            <p className="about__degree">{education.degree} · GPA {education.gpa}</p>
+            <p className="about__degree">{education.degree}</p>
             <p className="about__expected mono">{education.expected}</p>
-            <div className="about__coursework">
-              {education.coursework.map((c) => (
-                <span key={c} className="tag">{c}</span>
-              ))}
-            </div>
           </div>
         </motion.aside>
       </div>
