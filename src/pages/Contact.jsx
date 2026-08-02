@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import { profile } from "../data/content";
 import "./Contact.css";
 
+// Sign up free at formspree.io, create a form, and paste your form ID
+// here (the part after "f/" in the endpoint they give you).
+const FORMSPREE_ID = "xpqvgkpa";
+
 function GitHubIcon() {
   return (
     <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
@@ -21,6 +25,8 @@ function LinkedInIcon() {
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
   const copyEmail = async () => {
     try {
@@ -29,6 +35,30 @@ export default function Contact() {
       setTimeout(() => setCopied(false), 1800);
     } catch {
       /* clipboard unavailable — link still works */
+    }
+  };
+
+  const handleChange = (e) => {
+    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(e.target),
+      });
+      if (res.ok) {
+        setStatus("sent");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
     }
   };
 
@@ -68,6 +98,40 @@ export default function Contact() {
           <a href={profile.github} target="_blank" rel="noreferrer" className="contact__icon-btn" aria-label="See my GitHub repos">
             <GitHubIcon />
           </a>
+        </div>
+
+        <div className="contact__form-panel bracket-panel">
+          <span className="eyebrow">Send a Message</span>
+          <form className="contact__form" onSubmit={handleSubmit}>
+            <div className="contact__form-row">
+              <div className="form-field">
+                <label htmlFor="name">Full name</label>
+                <input
+                  id="name" name="name" className="input" type="text" required
+                  value={form.name} onChange={handleChange}
+                />
+              </div>
+              <div className="form-field">
+                <label htmlFor="email">Email address</label>
+                <input
+                  id="email" name="email" className="input" type="email" required
+                  value={form.email} onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div className="form-field">
+              <label htmlFor="message">Your message</label>
+              <textarea
+                id="message" name="message" className="input textarea" rows={5} required
+                value={form.message} onChange={handleChange}
+              />
+            </div>
+            <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
+              {status === "sending" ? "Sending…" : "Send Message →"}
+            </button>
+            {status === "sent" && <p className="contact__form-status contact__form-status--ok">Message sent — thanks, I'll get back to you soon.</p>}
+            {status === "error" && <p className="contact__form-status contact__form-status--err">Something went wrong — try emailing me directly instead.</p>}
+          </form>
         </div>
       </motion.div>
     </div>
