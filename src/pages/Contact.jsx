@@ -24,19 +24,8 @@ function LinkedInIcon() {
 }
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
-
-  const copyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(profile.email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1800);
-    } catch {
-      /* clipboard unavailable — link still works */
-    }
-  };
 
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -75,30 +64,8 @@ export default function Contact() {
         transition={{ duration: 0.4 }}
       >
         <p className="contact__lede">
-          Open to internships, collaborations, and interesting problems. The fastest way to reach me is email.
+          Open to internships, collaborations, and interesting problems. Send me a message below.
         </p>
-
-        <div className="contact__main bracket-panel">
-          <span className="eyebrow">Direct Channel</span>
-          <a href={`mailto:${profile.email}`} className="contact__email">
-            {profile.email}
-          </a>
-          <div className="contact__actions">
-            <a href={`mailto:${profile.email}`} className="btn btn-primary">Send an Email →</a>
-            <button className="btn" onClick={copyEmail} type="button">
-              {copied ? "Copied ✓" : "Copy Address"}
-            </button>
-          </div>
-        </div>
-
-        <div className="contact__socials">
-          <a href={profile.linkedin} target="_blank" rel="noreferrer" className="contact__icon-btn" aria-label="Connect on LinkedIn">
-            <LinkedInIcon />
-          </a>
-          <a href={profile.github} target="_blank" rel="noreferrer" className="contact__icon-btn" aria-label="See my GitHub repos">
-            <GitHubIcon />
-          </a>
-        </div>
 
         <div className="contact__form-panel bracket-panel">
           <span className="eyebrow">Send a Message</span>
@@ -132,6 +99,15 @@ export default function Contact() {
             {status === "sent" && <p className="contact__form-status contact__form-status--ok">Message sent — thanks, I'll get back to you soon.</p>}
             {status === "error" && <p className="contact__form-status contact__form-status--err">Something went wrong — try emailing me directly instead.</p>}
           </form>
+        </div>
+
+        <div className="contact__socials">
+          <a href={profile.linkedin} target="_blank" rel="noreferrer" className="contact__icon-btn" aria-label="Connect on LinkedIn">
+            <LinkedInIcon />
+          </a>
+          <a href={profile.github} target="_blank" rel="noreferrer" className="contact__icon-btn" aria-label="See my GitHub repos">
+            <GitHubIcon />
+          </a>
         </div>
       </motion.div>
     </div>

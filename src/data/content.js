@@ -87,6 +87,15 @@ export const experience = [
 
 export const projects = [
   {
+    name: "Space Signal Receiver",
+    tag: "Personal Project",
+    tech: ["Python", "NumPy", "Matplotlib", "Flask"],
+    blurb:
+      "A signal-detection pipeline built the way real SETI/radio-astronomy software works: capture, detect, visualize. Runs a de-doppler drift search on simulated spectrogram data — the same core technique turbo_seti uses on real Breakthrough Listen telescope data — with a Flask web UI to run a capture and view the waterfall plot. Built to plug into a real RTL-SDR dongle later; one line changes.",
+    live: "https://space-signal-receiver.vercel.app/",
+    github: "https://github.com/kamilcodes14/space-signal-receiver",
+  },
+  {
     name: "F.R.I.D.A.Y. — AI Voice Assistant",
     tag: "Personal Project",
     tech: ["Python", "Tkinter", "Web Speech API", "Claude API"],
