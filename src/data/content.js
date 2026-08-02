@@ -57,7 +57,7 @@ export const experience = [
     org: "CodeAlpha",
     role: "Machine Learning Intern",
     location: "Remote, India",
-    period: "2026 – Present",
+    period: "June 2026 – July 2026 ",
     current: true,
     bullets: [
       "Building end-to-end ML pipelines — data cleaning, feature engineering, model training, and evaluation — shipped as interactive, deployable demos rather than notebooks.",
@@ -68,7 +68,7 @@ export const experience = [
     org: "Systems Limited",
     role: "AI Intern",
     location: "Lahore, Pakistan",
-    period: "2025",
+    period: "Aug 2025 -Dec 2025n",
     current: false,
     bullets: [
       "Built and integrated LLM-powered automation solutions into enterprise workflows using Generative AI APIs, handling prompt engineering, response parsing, and pipeline integration.",
