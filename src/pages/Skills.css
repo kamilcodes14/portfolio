@@ -24,19 +24,6 @@
   color: var(--text);
 }
 
-.skill-panel__status {
-  font-size: 0.65rem;
-  color: var(--cyan);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-}
-.skill-panel__status .dot {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--cyan); box-shadow: 0 0 6px var(--cyan);
-  animation: pulse 2s ease-in-out infinite;
-}
-
 .skill-panel__items {
   display: flex;
   flex-wrap: wrap;

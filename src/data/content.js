@@ -22,17 +22,22 @@ export const education = {
   school: "University of Management and Technology (UMT)",
   location: "Lahore, Pakistan",
   degree: "B.S. Computer Science",
+  gpa: "3.1 / 4.0",
   expected: "Expected October 2028",
+  coursework: [
+    "Database Systems",
+    "Computer Networks",
+    "Computer Architecture",
+    "Theory of Automata",
+    "Professional Practices",
+  ],
 };
 
 export const about = {
-  hook: "I build production-ready software on Earth — and explore astronomical data beyond it.",
   bio: [
-    "As a 4th-semester Computer Science student at UMT Lahore, my core focus is building end-to-end AI/ML pipelines and full-stack web products. Currently, I work as an AI/ML Engineer at US-based Product Management Accelerator, taking models from raw notebooks to deployed, user-facing applications using React and FastAPI.",
-  ],
-  sideHeading: "On the side — Astrophysics & Space Data",
-  sideBio: [
-    "Beyond core software engineering, I have a deep interest in space and astronomy (following JWST, Artemis, and exoplanet research). I channel this interest into personal data science experiments — applying machine learning models to astronomical datasets and building interactive space simulations.",
+    "I'm a second-year CS student at UMT Lahore, splitting my time between two things I care about: building AI/ML systems that work in the real world, and full-stack products people actually use.",
+    "Right now that means an AI/ML Engineer role at Product Management Accelerator (a US-based company), a parallel Machine Learning internship at CodeAlpha, and a growing list of side projects — a voice assistant modeled on Iron Man's F.R.I.D.A.Y, a full-stack weather app, and a couple of ML models I've pushed from notebook to deployed demo.",
+    "Outside of code, I'm a genuine space and astronomy enthusiast — I follow JWST, the Artemis program, and exoplanet research closely. That interest isn't just a hobby footnote: it's what led me to build Cosmos Explorer, a WebGL 3D space simulator, and it's the reason I'm currently applying ML to NASA's Kepler dataset to detect exoplanet transits.",
   ],
   facts: [
     { label: "Based in", value: "Lahore, Pakistan" },
@@ -56,19 +61,19 @@ export const experience = [
   {
     org: "CodeAlpha",
     role: "Machine Learning Intern",
-    location: "Delhi, India",
-    period: "June – July 2026",
-    current: false,
+    location: "Remote, India",
+    period: "2026 – Present",
+    current: true,
     bullets: [
-      "Built end-to-end ML pipelines — data cleaning, feature engineering, model training, and evaluation — shipped as interactive, deployable demos rather than notebooks.",
+      "Building end-to-end ML pipelines — data cleaning, feature engineering, model training, and evaluation — shipped as interactive, deployable demos rather than notebooks.",
       "Trained and benchmarked Logistic Regression, Random Forest, and Gradient Boosting for loan-risk scoring (78% accuracy) on the UCI German Credit dataset, and 4 classifiers across 3 disease-prediction datasets (up to 98% accuracy), each with 5-fold cross-validation.",
     ],
   },
   {
     org: "Systems Limited",
     role: "AI Intern",
-    location: "Islamabad, Pakistan",
-    period: "Feb. 2025 – Dec. 2025",
+    location: "Lahore, Pakistan",
+    period: "2025",
     current: false,
     bullets: [
       "Built and integrated LLM-powered automation solutions into enterprise workflows using Generative AI APIs, handling prompt engineering, response parsing, and pipeline integration.",
@@ -78,15 +83,6 @@ export const experience = [
 ];
 
 export const projects = [
-  {
-    name: "Space Signal Receiver",
-    tag: "Personal Project",
-    tech: ["Python", "NumPy", "Matplotlib", "Flask"],
-    blurb:
-      "A signal-detection pipeline built the way real SETI/radio-astronomy software works: capture, detect, visualize. Runs a de-doppler drift search on simulated spectrogram data — the same core technique turbo_seti uses on real Breakthrough Listen telescope data — with a Flask web UI to run a capture and view the waterfall plot. Built to plug into a real RTL-SDR dongle later; one line changes.",
-    live: "https://space-signal-receiver.vercel.app/",
-    github: "https://github.com/kamilcodes14/space-signal-receiver",
-  },
   {
     name: "F.R.I.D.A.Y. — AI Voice Assistant",
     tag: "Personal Project",
@@ -153,7 +149,7 @@ export const skills = [
   },
   {
     category: "ML / DL",
-    items: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "XGBoost"],
+    items: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "XGBoost", "TensorFlow", "Keras", "PyTorch"],
   },
   {
     category: "Tools & Databases",

@@ -22,7 +22,6 @@ export default function Skills() {
           >
             <div className="skill-panel__head">
               <h3 className="mono skill-panel__title">{group.category.toUpperCase()}</h3>
-              <span className="mono skill-panel__status"><span className="dot" /> ONLINE</span>
             </div>
             <div className="skill-panel__items">
               {group.items.map((item) => (
