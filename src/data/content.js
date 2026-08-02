@@ -56,19 +56,19 @@ export const experience = [
   {
     org: "CodeAlpha",
     role: "Machine Learning Intern",
-    location: "Remote, India",
-    period: "2026 – Present",
-    current: true,
+    location: "Delhi, India",
+    period: "June – July 2026",
+    current: false,
     bullets: [
-      "Building end-to-end ML pipelines — data cleaning, feature engineering, model training, and evaluation — shipped as interactive, deployable demos rather than notebooks.",
+      "Built end-to-end ML pipelines — data cleaning, feature engineering, model training, and evaluation — shipped as interactive, deployable demos rather than notebooks.",
       "Trained and benchmarked Logistic Regression, Random Forest, and Gradient Boosting for loan-risk scoring (78% accuracy) on the UCI German Credit dataset, and 4 classifiers across 3 disease-prediction datasets (up to 98% accuracy), each with 5-fold cross-validation.",
     ],
   },
   {
     org: "Systems Limited",
     role: "AI Intern",
-    location: "Lahore, Pakistan",
-    period: "2025",
+    location: "Islamabad, Pakistan",
+    period: "Feb. 2025 – Dec. 2025",
     current: false,
     bullets: [
       "Built and integrated LLM-powered automation solutions into enterprise workflows using Generative AI APIs, handling prompt engineering, response parsing, and pipeline integration.",
