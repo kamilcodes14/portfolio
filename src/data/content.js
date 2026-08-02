@@ -22,15 +22,7 @@ export const education = {
   school: "University of Management and Technology (UMT)",
   location: "Lahore, Pakistan",
   degree: "B.S. Computer Science",
-  gpa: "3.1 / 4.0",
   expected: "Expected October 2028",
-  coursework: [
-    "Database Systems",
-    "Computer Networks",
-    "Computer Architecture",
-    "Theory of Automata",
-    "Professional Practices",
-  ],
 };
 
 export const about = {

@@ -65,13 +65,8 @@ export default function About() {
           <div className="bracket-panel about__education">
             <span className="eyebrow">Education</span>
             <h3 className="about__school">{education.school}</h3>
-            <p className="about__degree">{education.degree} · GPA {education.gpa}</p>
+            <p className="about__degree">{education.degree}</p>
             <p className="about__expected mono">{education.expected}</p>
-            <div className="about__coursework">
-              {education.coursework.map((c) => (
-                <span key={c} className="tag">{c}</span>
-              ))}
-            </div>
           </div>
         </motion.aside>
       </div>
