@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { profile, stats, projects } from "../data/content";
+import IntroVideo, { INTRO_SESSION_KEY } from "../components/IntroVideo";
 import "./Home.css";
 
 function RotatingRole() {
@@ -32,9 +33,17 @@ function RotatingRole() {
 
 export default function Home() {
   const featured = projects.slice(0, 3);
+  const [showIntro, setShowIntro] = useState(
+    () => typeof window !== "undefined" && !sessionStorage.getItem(INTRO_SESSION_KEY)
+  );
 
   return (
-    <div className="page home">
+    <>
+      <AnimatePresence>
+        {showIntro && <IntroVideo onDone={() => setShowIntro(false)} />}
+      </AnimatePresence>
+
+      <div className="page home">
       <section className="hero">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -73,9 +82,9 @@ export default function Home() {
       <section className="currently bracket-panel">
         <span className="eyebrow">Currently</span>
         <p className="currently__text">
-          Building AI/ML systems as an <strong>AI/ML Engineer at Product Management Accelerator</strong> (US-based, remote),
-          alongside a <strong>Machine Learning internship at CodeAlpha</strong>. Recently shipped a voice assistant
-          inspired by Iron Man's AI, and a full-stack weather app running on Supabase.
+          Building AI/ML systems as an <strong>AI/ML Engineer at Product Management Accelerator</strong> (US-based, remote).
+          Recently shipped a voice assistant inspired by Iron Man's AI, a full-stack weather app running on Supabase,
+          and a SETI-style signal-detection pipeline with real RTL-SDR hardware.
         </p>
       </section>
 
@@ -107,6 +116,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
